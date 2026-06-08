@@ -1,13 +1,13 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 // Placeholder images - replace with actual pre-wedding photos
 const photos = [
   {
     id: 1,
-    src: "/photos/photo1.jpg",
+    src: "/photos/vishal kilaskar.JPG",
     alt: "Vishal & Sneha - 1",
     placeholder: "https://placehold.co/800x600/FDF2F0/B76E79?text=Photo+1",
   },
@@ -40,13 +40,19 @@ const photos = [
 export default function PhotoGallery() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const nextPhoto = () => {
+  const nextPhoto = useCallback(() => {
     setCurrentIndex((prev) => (prev + 1) % photos.length);
-  };
+  }, []);
 
   const prevPhoto = () => {
     setCurrentIndex((prev) => (prev - 1 + photos.length) % photos.length);
   };
+
+  // Auto-advance every 4 seconds
+  useEffect(() => {
+    const interval = setInterval(nextPhoto, 4000);
+    return () => clearInterval(interval);
+  }, [nextPhoto]);
 
   return (
     <section
@@ -158,6 +164,7 @@ export default function PhotoGallery() {
               backgroundColor: "rgba(255, 255, 255, 0.8)",
               color: "#6B5E5A",
               border: "1px solid rgba(183, 110, 121, 0.15)",
+              padding: "2px 6px",
             }}
           >
             {currentIndex + 1} / {photos.length}

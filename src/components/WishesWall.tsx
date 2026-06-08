@@ -110,13 +110,13 @@ export default function WishesWall() {
               <p className="text-sm mb-4" style={{ color: "var(--color-text-muted)", fontWeight: 300 }}>
                 Your wish has been submitted and will appear after approval.
               </p>
-              <button
+              {/* <button
                 onClick={() => setSubmitted(false)}
                 className="px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105"
                 style={{ backgroundColor: "var(--color-primary)", color: "#ffffff" }}
               >
                 Send Another Wish
-              </button>
+              </button> */}
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="glass-card p-7">

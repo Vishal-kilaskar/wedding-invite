@@ -181,7 +181,7 @@ export default function EventDetails() {
             className="text-xl sm:text-2xl md:text-3xl font-semibold mb-2"
             style={{ color: "var(--color-primary-dark)", fontFamily: "var(--font-heading)" }}
           >
-            Nigudgi Function Hall
+            Nigudgi Function Hall, Kalaburagi.
           </h3>
           <p className="text-xs sm:text-sm mb-6" style={{ color: "var(--color-text-muted)" }}>
             All events will be held at this venue

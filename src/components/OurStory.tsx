@@ -31,7 +31,7 @@ const milestones = [
     id: 5,
     title: "Forever Begins",
     description: "And now, we invite you to witness the beginning of our forever as we take this beautiful journey together.",
-    icon: "�",
+    icon: "♾️",
   },
 ];
 

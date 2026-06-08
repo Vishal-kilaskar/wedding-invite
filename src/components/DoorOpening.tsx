@@ -370,7 +370,7 @@ export default function DoorOpening({ onOpen }: DoorOpeningProps) {
 
               <motion.p
                 className="text-3xl sm:text-4xl md:text-6xl font-bold pr-6"
-                style={{ color: "#B76E79", fontFamily: "var(--font-heading)" }}
+                style={{ color: "#B76E79", fontFamily: "var(--font-display)" }}
                 animate={{ opacity: [0.6, 1, 0.6] }}
                 transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
               >
@@ -398,7 +398,7 @@ export default function DoorOpening({ onOpen }: DoorOpeningProps) {
 
               <motion.p
                 className="text-3xl sm:text-4xl md:text-6xl font-bold pl-6"
-                style={{ color: "#B76E79", fontFamily: "var(--font-heading)" }}
+                style={{ color: "#B76E79", fontFamily: "var(--font-display)" }}
                 animate={{ opacity: [0.6, 1, 0.6] }}
                 transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
               >

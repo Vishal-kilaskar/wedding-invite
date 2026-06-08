@@ -32,7 +32,11 @@ export async function GET() {
     const rsvps = await prisma.rsvp.findMany({
       orderBy: { createdAt: "desc" },
     });
-    return NextResponse.json(rsvps);
+    const parsed = rsvps.map((rsvp) => ({
+      ...rsvp,
+      events: JSON.parse(rsvp.events as string || "[]"),
+    }));
+    return NextResponse.json(parsed);
   } catch (error) {
     console.error("Failed to fetch RSVPs:", error);
     return NextResponse.json({ error: "Failed to fetch RSVPs" }, { status: 500 });

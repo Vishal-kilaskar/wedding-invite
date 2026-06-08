@@ -54,7 +54,7 @@ export default function HeroSection() {
             className="text-xs sm:text-sm md:text-base tracking-[0.15em] sm:tracking-[0.2em] leading-relaxed text-center max-w-[280px] sm:max-w-lg break-words"
             style={{ color: "#E6D5B8", fontFamily: "var(--font-body)", fontWeight: 300 }}
           >
-            The Kilaskar and Nagasidda families cordially invite you to celebrate the auspicious wedding of
+            The Kilaskar and Nagasiddu (Chincholikar) families cordially invite you to celebrate the auspicious wedding of
           </p>
         </motion.div>
 
@@ -107,7 +107,7 @@ export default function HeroSection() {
           className="text-xs sm:text-sm mb-8 md:mb-10"
           style={{ color: "#E6D5B8", fontFamily: "var(--font-body)", fontWeight: 300, opacity: 0.7 }}
         >
-          D/o Shri Vijaykumar and Smt Mukta Nagasidda
+          D/o Shri Vijaykumar and Smt Mukta Nagasiddu
         </motion.p>
 
       </div>

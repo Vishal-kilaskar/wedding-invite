@@ -118,6 +118,7 @@ export default function RSVPForm() {
         viewport={{ once: true }}
         transition={{ duration: 0.9, delay: 0.1 }}
         onSubmit={handleSubmit}
+        style={{ padding: '16px' }}
         className="max-w-lg mx-auto glass-card p-8 md:p-10 relative z-10"
       >
         {/* Name */}
