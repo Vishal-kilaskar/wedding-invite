@@ -7,34 +7,34 @@ import { motion, AnimatePresence } from "framer-motion";
 const photos = [
   {
     id: 1,
-    src: "/photos/vishal kilaskar.JPG",
+    src: "/photos/sneha-vishal-1.jpg",
     alt: "Vishal & Sneha - 1",
     placeholder: "https://placehold.co/800x600/FDF2F0/B76E79?text=Photo+1",
   },
   {
     id: 2,
-    src: "/photos/photo2.jpg",
+    src: "/photos/sneha-vishal-2.jpg",
     alt: "Vishal & Sneha - 2",
     placeholder: "https://placehold.co/800x600/FDF2F0/B76E79?text=Photo+2",
   },
   {
     id: 3,
-    src: "/photos/photo3.jpg",
+    src: "/photos/sneha-vishal-3.jpg",
     alt: "Vishal & Sneha - 3",
     placeholder: "https://placehold.co/800x600/FDF2F0/B76E79?text=Photo+3",
   },
-  {
-    id: 4,
-    src: "/photos/photo4.jpg",
-    alt: "Vishal & Sneha - 4",
-    placeholder: "https://placehold.co/800x600/FDF2F0/B76E79?text=Photo+4",
-  },
-  {
-    id: 5,
-    src: "/photos/photo5.jpg",
-    alt: "Vishal & Sneha - 5",
-    placeholder: "https://placehold.co/800x600/FDF2F0/B76E79?text=Photo+5",
-  },
+  // {
+  //   id: 4,
+  //   src: "/photos/photo4.jpg",
+  //   alt: "Vishal & Sneha - 4",
+  //   placeholder: "https://placehold.co/800x600/FDF2F0/B76E79?text=Photo+4",
+  // },
+  // {
+  //   id: 5,
+  //   src: "/photos/photo5.jpg",
+  //   alt: "Vishal & Sneha - 5",
+  //   placeholder: "https://placehold.co/800x600/FDF2F0/B76E79?text=Photo+5",
+  // },
 ];
 
 export default function PhotoGallery() {
@@ -103,23 +103,28 @@ export default function PhotoGallery() {
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative overflow-hidden rounded-2xl aspect-[4/3] md:aspect-[16/10] shadow-xl mx-auto"
+          className="relative overflow-hidden rounded-2xl aspect-video shadow-xl mx-auto"
           style={{
             border: "1px solid rgba(183, 110, 121, 0.15)",
             boxShadow: "0 20px 60px rgba(183, 110, 121, 0.1), 0 4px 20px rgba(0, 0, 0, 0.05)",
           }}
         >
           <AnimatePresence mode="wait">
-            <motion.img
+            <motion.div
               key={currentIndex}
-              src={photos[currentIndex].placeholder}
-              alt={photos[currentIndex].alt}
-              className="absolute inset-0 w-full h-full object-cover"
-              initial={{ opacity: 0, scale: 1.05 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.98 }}
+              className="absolute inset-0 w-full h-full"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
               transition={{ duration: 0.6, ease: "easeInOut" }}
-            />
+            >
+              <img
+                src={photos[currentIndex].src}
+                alt={photos[currentIndex].alt}
+                draggable={false}
+                className="w-full h-full object-contain"
+              />
+            </motion.div>
           </AnimatePresence>
 
           {/* Soft overlay gradient */}

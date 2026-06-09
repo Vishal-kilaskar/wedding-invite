@@ -60,7 +60,7 @@ export default function MusicPlayer() {
       transition={{ duration: 0.5, delay: 1.5 }}
       className="fixed bottom-6 right-6 z-50"
     >
-      <audio ref={audioRef} src="/audio/Jashn-E-Bahaaraa (Instrumental - Flute).mp3" loop />
+      <audio ref={audioRef} src="/audio/Jashn-E-Bahaaraa (Instrumental - Flute).opus" loop />
       <motion.button
         onClick={toggleMusic}
         whileHover={{ scale: 1.1 }}
