@@ -75,7 +75,7 @@ export default function HeroSection() {
           className="text-xs sm:text-sm mb-2"
           style={{ color: "#E6D5B8", fontFamily: "var(--font-body)", fontWeight: 300, opacity: 0.7 }}
         >
-          S/o Shri Bagoji and Smt Rajeshwari Kilaskar
+          S/o Smt Rajeshwari and Shri Bagoji Kilaskar
         </motion.p>
 
         <motion.div
@@ -107,7 +107,7 @@ export default function HeroSection() {
           className="text-xs sm:text-sm mb-8 md:mb-10"
           style={{ color: "#E6D5B8", fontFamily: "var(--font-body)", fontWeight: 300, opacity: 0.7 }}
         >
-          D/o Shri Vijaykumar and Smt Mukta Nagasiddu
+          D/o Smt Mukta and Shri Vijaykumar Nagasiddu
         </motion.p>
 
       </div>

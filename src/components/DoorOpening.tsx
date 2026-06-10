@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
+
 interface DoorOpeningProps {
   onOpen: () => void;
 }
@@ -331,7 +332,7 @@ export default function DoorOpening({ onOpen }: DoorOpeningProps) {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.8 }}
-            className="text-xs md:text-sm tracking-[0.2em] mb-2 text-center"
+            className="text-xs md:text-sm tracking-[0.15em] mb-2 text-center"
             style={{ color: "#E6D5B8", fontFamily: "var(--font-heading)", opacity: 0.7 }}
           >
             ॥ श्री गणेशाय नमः ॥
@@ -342,7 +343,7 @@ export default function DoorOpening({ onOpen }: DoorOpeningProps) {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.5 }}
-            className="text-sm md:text-base tracking-[0.4em] uppercase mb-8 text-center"
+            className="text-sm md:text-base tracking-[0.3em] uppercase mb-8 text-center"
             style={{ color: "#E6D5B8", fontFamily: "var(--font-body)" }}
           >
             Wedding Invitation

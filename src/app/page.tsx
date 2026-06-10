@@ -12,6 +12,7 @@ import WishesWall from "@/components/WishesWall";
 import MusicPlayer from "@/components/MusicPlayer";
 import FallingEffects from "@/components/FallingEffects";
 import Footer from "@/components/Footer";
+import { Analytics } from "@vercel/analytics/next";
 
 export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,6 +33,7 @@ export default function Home() {
           <RSVPForm />
           <WishesWall />
           <Footer />
+          <Analytics />
         </div>
       )}
     </>

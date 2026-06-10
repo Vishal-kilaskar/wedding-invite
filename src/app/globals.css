@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Ams Vedant";
+  src: url("/fonts/Ams%20Vedant.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   /* Romantic Blush & Rose Gold Theme */
   --color-primary: #B76E79;
